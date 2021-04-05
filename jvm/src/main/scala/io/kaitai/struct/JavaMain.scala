@@ -240,7 +240,7 @@ object JavaMain {
 
   def main(args: Array[String]): Unit = {
     parseCommandLine(args) match {
-      case None => System.exit(1)
+      case None => Console.println("System.exit(1)")
       case Some(config0) =>
         Log.initFromVerboseFlag(config0.verbose)
         val config = config0.copy(importPaths = config0.importPaths ++ envPaths ++ homePath)
@@ -271,7 +271,7 @@ class JavaMain(config: CLIConfig) {
       Console.println(JSON.mapToJson(logs))
     } else {
       if (logsHaveErrors(logs))
-        System.exit(2)
+        Console.println(logs)
     }
   }
 
