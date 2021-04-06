@@ -239,6 +239,7 @@ object JavaMain {
     sys.env.get("KSPATH").toList.flatMap((x) => x.split(File.pathSeparatorChar))
 
   def main(args: Array[String]): Unit = {
+    Console.println(args.mkString(" "))
     parseCommandLine(args) match {
       case None => Console.println("System.exit(1)")
       case Some(config0) =>
