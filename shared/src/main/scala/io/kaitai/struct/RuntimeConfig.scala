@@ -59,7 +59,7 @@ object CppRuntimeConfig {
 case class JavaRuntimeConfig(
   javaPackage: String = "",
   fromFileClass: String = "io.kaitai.struct.ByteBufferKaitaiStream",
-  endOfStreamErrorClass: String = "java.nio.BufferUnderflowException",
+  endOfStreamErrorClass: String = "java.nio.BufferUnderflowException"
 )
 
 /**
